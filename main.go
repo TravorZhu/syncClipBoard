@@ -184,7 +184,9 @@ func main() {
 	for _, addr := range addrs {
 		if ipnet, ok := addr.(*net.IPNet); ok && !ipnet.IP.IsLoopback() {
 			if ipnet.IP.To4() != nil {
-				ipaddr = ipnet.IP.To4().String()
+				if ipaddr == "" {
+					ipaddr = ipnet.IP.To4().String()
+				}
 				println(ipnet.IP.To4().String())
 			}
 		}
