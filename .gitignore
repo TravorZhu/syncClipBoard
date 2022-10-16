@@ -1,2 +1,3 @@
 # Project exclude paths
 /react/node_modules/
+/static/

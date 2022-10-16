@@ -3,5 +3,5 @@ package utils
 import "os/exec"
 
 func OpenDir(path string) {
-	exec.Command(`open`, path)
+	println(exec.Command(`open`, path).String())
 }
